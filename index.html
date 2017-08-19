@@ -2,23 +2,78 @@
 <head>
   <title>PandaHome</title>
   <link rel="stylesheet" href="css/w3.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#kodi").click(function(){
+        // TODO Open Kodi App
+      });
+      $("#emby").click(function(){
+         window.location.href = "http://app.emby.media";
+      });
+      $("#netflix").click(function(){
+         window.location.href = "http://www.netflix.com";
+      });
+      $("#youtube").click(function(){
+         window.location.href = "http://youtube.com";
+      });
+      $("#dailymotion").click(function(){
+         window.location.href = "http://dailymotion.com";
+      });
+      $("#molotov").click(function(){
+       // TODO Open Molotov App
+      });
+      $("#qwant").click(function(){
+         window.location.href = "http://qwant.com";
+      });
+      $("#nextcloud").click(function(){
+         window.location.href = "http://localhost/nextcloud";
+      });
+      $("#ampache").click(function(){
+         window.location.href = "http://localhost/ampache";
+      });
+    });
+  </script>
 </head>
-<body class="w3-light-grey w3-content" style="max-width:1601px">
-  <div class="w3-main w3-content" style="max-width:1601px;margin-top:83px">
-    <div class="w3-row w3-grayscale-min">
-      <div class="w3-half">
-        <img src="images/kodi.png" style="width:100%" onclick="onClick(this)" alt="Kodi">
-        <img src="images/emby.png" style="width:100%" onclick="onClick(this)" alt="Emby Theater">
-     </div>
-     <div class="w3-row w3-grayscale-min">
-        <img src="images/netflix.png" style="width:100%" onclick="onClick(this)" alt="Netflix">
-        <img src="images/youtube.png" style="width:100%" onclick="onClick(this)" alt="Youtube">
-     </div>
-     <div class="w3-half">
-        <img src="images/dailymotion.png" style="width:100%" onclick="onClick(this)" alt="Dailymotion">
-        <img src="images/molotov-tv.png" style="width:100%" onclick="onClick(this)" alt="Molotov-TV">
+<body class=" w3-content" style="max-width:1600px">
+
+  <div class="w3-main w3-content" style="max-width:1600px;margin-top:55px;">
+      <div id="kodi" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/kodi.png" style="width:100%" alt="Kodi">
+        <div class="w3-center w3-blue w3-container"><p>Kodi</p></div>
       </div>
+      <div id="emby" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/emby.png" style="width:100%" alt="Emby Theater">
+        <div class="w3-center w3-green w3-container"><p>Emby Theater</p></div>
     </div>
+  <div id="netflix" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/netflix.png" style="width:100%" alt="Netflix">
+        <div class="w3-center w3-red w3-container"><p>Netflix</p></div>
   </div>
+  <div id="youtube" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/you-logo.png" style="width:100%" alt="">
+        <div class="w3-center w3-red w3-container"><p>Youtube</p></div>
+  </div>
+     <div id="dailymotion" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/dailymotion.jpg" style="width:100%" alt="Dailymotion">
+        <div class="w3-center w3-pale-blue w3-container"><p>Dailymotion</p></div>
+    </div>
+    <div id="molotov" class="w3-third w3-hover-opacity w3-container">
+        <img src="images/molotov-tv.png" style="width:100%" alt="Molotov-TV">
+        <div class="w3-center w3-yellow w3-container"><p>Molotov TV</p></div>
+    </div>
+    <div id="qwant" class="w3-third w3-hover-opacity w3-container">
+       <img src="images/qwant.jpg" style="width:100%" alt="Qwant">
+       <div class="w3-center w3-red w3-container"><p>Qwant</p></div>
+   </div>
+   <div id="nextcloud" class="w3-third w3-hover-opacity w3-container">
+      <img src="images/nextcloud.png" style="width:100%" alt="Nextcloud">
+      <div class="w3-center w3-blue w3-container"><p>Nextcloud</p></div>
+  </div>
+  <div id="ampache" class="w3-third w3-hover-opacity w3-container">
+     <img src="images/ampache.png" style="width:100%" alt="Ampache">
+     <div class="w3-center w3-orange w3-container"><p>Ampache</p></div>
+ </div>
+ </div>
 </body>
 </html>
