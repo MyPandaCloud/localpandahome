@@ -1,3 +1,20 @@
+<?php
+$hosts=file_get_contents("/etc/hosts");
+
+$embytmp=strstr($hosts, 'emby');
+$nexttmp=strstr($hosts, 'nextcloud');
+$ampachetmp=strstr($hosts, 'ampache');
+$hasstmp=strstr($hosts, 'homeassistant');
+$zonetmp=strstr($hosts, 'zoneminder');
+$transtmp=strstr($hosts, 'transmission');
+
+$emby=strstr($embytmp, ' ', true);
+$nextcloud=strstr($nexttmp, ' ', true);
+$hass=strstr($hasstmp, ' ', true);
+$zoneminder=strstr($zonetmp, ' ', true);
+$transmission=strstr($transtmp, ' ', true);
+$ampache=strstr($ampachetmp, ' ', true);
+?>
 <html>
 <head>
   <title>PandaHome</title>
@@ -7,7 +24,7 @@
   <script>
     $(document).ready(function(){
       $("#emby").click(function(){
-         window.location.href = "http://emby.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $emby; ?>";
       });
       $("#netflix").click(function(){
          window.location.href = "http://www.netflix.com";
@@ -22,19 +39,19 @@
          window.location.href = "http://qwant.com";
       });
       $("#nextcloud").click(function(){
-         window.location.href = "http://nextcloud.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $nextcloud; ?>";
       });
       $("#ampache").click(function(){
-         window.location.href = "http://ampache.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $ampache; ?>";
       });
       $("#homeassistant").click(function(){
-         window.location.href = "http://homeassistant.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $hass; ?>";
       });
       $("#zoneminder").click(function(){
-         window.location.href = "http://zoneminder.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $zoneminder; ?>";
       });
       $("#transmission").click(function(){
-         window.location.href = "http://transmission.meudon.mypanda.cloud/";
+	      window.location.href = "http://<?php echo $transmission; ?>";
       });
     });
 
